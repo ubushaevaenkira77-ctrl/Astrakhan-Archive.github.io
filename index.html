@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Астраханский Государственный Архив</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключение иконок (FontAwesome для красоты) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo-area">
+                <!-- ВСТАВЬТЕ СЮДА ВАШ ЛОГОТИП -->
+                <img src="images/logo.png" alt="Логотип Архива" class="logo-img">
+                <div class="logo-text">
+                    <span>АСТРАХАНСКИЙ</span>
+                    <span>ГОСУДАРСТВЕННЫЙ</span>
+                    <span class="logo-bold">АРХИВ</span>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="about.html">ОБ АРХИВЕ</a></li>
+                    <li><a href="#activity">ДЕЯТЕЛЬНОСТЬ</a></li>
+                    <li><a href="#documents">ДОКУМЕНТЫ</a></li>
+                    <li><a href="services.html">УСЛУГИ</a></li>
+                    <li><a href="#contacts">КОНТАКТЫ</a></li>
+                </ul>
+            </nav>
+            <div class="header-action">
+                <a href="request.html" class="btn-primary">ОНЛАЙН-ЗАПРОС</a>
+            </div>
+        </div>
+    </header>
+
+        <!-- Главный экран (Hero Section) - НОВЫЙ КОД -->
+    <section class="hero" style="background-image: url('images/hero-illustration.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>ХРАНИМ ПРОШЛОЕ<br><span class="gold-text">СОЗДАЁМ БУДУЩЕЕ</span></h1>
+                <p>Астраханский Государственный Архив — хранитель исторической памяти, свидетель времени и опора для будущих поколений.</p>
+                 <a href="about.html" class="btn-outline">ОБ АРХИВЕ →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Направления деятельности -->
+    <section id="activity" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>НАПРАВЛЕНИЯ ДЕЯТЕЛЬНОСТИ</h2>
+                <a href="#" class="text-link">ВСЕ НАПРАВЛЕНИЯ →</a>
+            </div>
+            <div class="grid-4">
+                <div class="card-service">
+                    <i class="fas fa-box-archive fa-3x"></i>
+                    <h3>ХРАНЕНИЕ ДОКУМЕНТОВ</h3>
+                    <p>Обеспечение надежного и бережного хранения документального наследия.</p>
+                </div>
+                <div class="card-service">
+                    <i class="fas fa-search fa-3x"></i>
+                    <h3>ИСПОЛЬЗОВАНИЕ ДОКУМЕНТОВ</h3>
+                    <p>Предоставление документов для исследовательской, научной и иной деятельности.</p>
+                </div>
+                <div class="card-service">
+                    <i class="fas fa-folder-open fa-3x"></i>
+                    <h3>КОМПЛЕКТОВАНИЕ</h3>
+                    <p>Пополнение архивного фонда новыми документами из различных источников.</p>
+                </div>
+                <div class="card-service">
+                    <i class="fas fa-desktop fa-3x"></i>
+                    <h3>ЦИФРОВЫЕ РЕСУРСЫ</h3>
+                    <p>Создание цифровых копий и электронных архивов для удобного доступа.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Архив в цифрах -->
+    <section class="stats-section">
+        <div class="container stats-container">
+            <h2>АРХИВ В ЦИФРАХ</h2>
+            <div class="grid-4 stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-file-alt fa-2x"></i>
+                    <div class="stat-number">1 250 000+</div>
+                    <div class="stat-desc">ЕДИНИЦ ХРАНЕНИЯ</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-folder fa-2x"></i>
+                    <div class="stat-number">450+</div>
+                    <div class="stat-desc">ФОНДОВ</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-clock fa-2x"></i>
+                    <div class="stat-number">470+</div>
+                    <div class="stat-desc">ЛЕТ ИСТОРИИ</div>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-users fa-2x"></i>
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-desc">ИССЛЕДОВАТЕЛЕЙ ЕЖЕГОДНО</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Популярные документы -->
+    <section id="documents" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2>ПОПУЛЯРНЫЕ ДОКУМЕНТЫ</h2>
+                <a href="#" class="text-link">ВСЕ ДОКУМЕНТЫ →</a>
+            </div>
+            <div class="grid-4">
+                <div class="card-doc">
+                    <img src="images/gramota.jpg" alt="Документ">
+                    <h4>Грамота Астраханского хана</h4>
+                    <span>XVII век</span>
+                </div>
+                <div class="card-doc">
+                    <img src="images/plan.png" alt="Документ">
+                    <h4>План Астраханской крепости</h4>
+                    <span>XVIII век</span>
+                </div>
+                <div class="card-doc">
+                    <img src="images/metric_book.jpg" alt="Документ">
+                    <h4>Метрическая книга</h4>
+                    <span>XIX век</span>
+                </div>
+                <div class="card-doc">
+                    <img src="images/photo_cronicle.jpg" alt="Документ">
+                    <h4>Фотохроника Астрахани</h4>
+                    <span>XX век</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты и Карта -->
+    <section id="contacts" class="section-padding bg-light">
+        <div class="container contacts-container">
+            <div class="contacts-info">
+                <h2>НАШИ КОНТАКТЫ</h2>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>АДРЕС:</strong><br>
+                        г. Астрахань, ул. Академика Королёва, 39А
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>ТЕЛЕФОН:</strong><br>
+                        +7 (8512) 66-62-40
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>EMAIL:</strong><br>                        
+                        astrahanarhive@astrobl.ru
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>РЕЖИМ РАБОТЫ:</strong><br>
+                        Пн-Чт: 8:00 - 17:00<br>
+                        Пт: 08:00 - 15:45
+                        Обед: 12:00 - 12:45
+                    </div>
+                </div>
+            </div>
+            <div class="contacts-map">
+                <!-- Яндекс Карта или Google Maps -->
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A5e4b4f7b6e9f4b1f8d7e6c5d4b3a2f1e&source=constructor" width="100%" height="450" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал (Footer) -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h4>ОБ АРХИВЕ</h4>
+                <ul>
+                    <li><a href="#">История</a></li>
+                    <li><a href="#">Руководство</a></li>
+                    <li><a href="#">Структура</a></li>
+                    <li><a href="#">Документы</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>ДЕЯТЕЛЬНОСТЬ</h4>
+                <ul>
+                    <li><a href="#">Хранение документов</a></li>
+                    <li><a href="#">Использование документов</a></li>
+                    <li><a href="#">Комплектование</a></li>
+                    <li><a href="#">Цифровые ресурсы</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>УСЛУГИ</h4>
+                <ul>
+                    <li><a href="#">Исполнение запросов</a></li>
+                    <li><a href="#">Тематические справки</a></li>
+                    <li><a href="#">Копирование документов</a></li>
+                    <li><a href="#">Методическая помощь</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-logo-col">
+                <div class="logo-area">
+                    <img src="images/logo.png" alt="Logo" class="logo-img-small">
+                    <div>
+                        <span>АСТРАХАНСКИЙ</span>
+                        <span>ГОСУДАРСТВЕННЫЙ</span>
+                        <span>АРХИВ</span>
+                    </div>
+                </div>
+                <p class="footer-slogan">Храним прошлое • Создаём будущее</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Астраханский Государственный Архив. Все права защищены.</p>
+                <p><a href="#">Политика конфиденциальности</a> | <a href="#">Карта сайта</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

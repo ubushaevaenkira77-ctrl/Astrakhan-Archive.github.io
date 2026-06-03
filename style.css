@@ -1,0 +1,520 @@
+/* Общие сбросы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', serif; /* Антикварный стиль для архива */
+    color: #2c2c2c;
+    background-color: #f9f8f5;
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Цвета */
+:root {
+    --gold: #c9a959;
+    --dark-blue: #1c2b3b;
+    --text-grey: #555;
+    --bg-grey: #f4f3ef;
+}
+
+/* Шапка */
+.header {
+    background-color: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    height: 70px; /* Задайте высоту логотипа */
+    width: auto;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo-bold {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover { color: var(--gold); }
+
+.btn-primary {
+    background-color: var(--gold);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 12px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-primary:hover { background-color: #b8953a; }
+
+/* Hero Section */
+.hero {
+    /* Убираем старый градиент */
+    /* background: linear-gradient(...); - УДАЛИТЬ ЭТУ СТРОКУ */
+    
+    /* Добавляем высоту, чтобы картинка влезла */
+    min-height: 90vh; /* Занимает 90% высоты экрана */
+    display: flex;
+    align-items: center;
+    padding: 0;
+    /* Фон задан в HTML, но продублируем здесь для надежности */
+    background-color: #f5f2eb; 
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    /* Убираем gap: 50px, так как картинка теперь фон */
+}
+
+.hero-content {
+    flex: 0 0 50%; /* Текст занимает 50% ширины */
+    padding: 50px 0;
+    z-index: 2; /* Чтобы текст был поверх фона */
+    /* Фон для текста, чтобы он читался, если нужно */
+    /* background: rgba(255,255,255, 0.7); - раскомментируйте, если текст плохо видно */
+}
+
+/* Убедитесь, что старый блок hero-image удален или закомментирован */
+/* .hero-image { display: none; } */
+
+.hero h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 400; 
+}
+
+.gold-text { 
+    color: var(--gold); 
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 450px;
+    margin-bottom: 30px;
+    color: #444;
+}
+
+.btn-outline {
+    display: inline-block;
+    border: 1px solid var(--dark-blue);
+    padding: 12px 30px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.btn-outline:hover {
+    background-color: var(--dark-blue);
+    color: #fff;
+}
+
+/* Cards and Grid */
+.section-padding { padding: 80px 0; }
+.bg-light { background-color: #f4f3ef; }
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.section-header h2 { text-transform: uppercase; letter-spacing: 2px; }
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card-service {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.card-service:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.card-service i { color: var(--dark-blue); margin-bottom: 15px; }
+.card-service h3 { font-size: 16px; margin-bottom: 10px; }
+
+/* Stats (Dark Blue) */
+.stats-section {
+    background-color: var(--dark-blue);
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.stats-section h2 { margin-bottom: 40px; letter-spacing: 2px; }
+
+.stat-item { padding: 20px; }
+.stat-number { font-size: 32px; font-weight: bold; margin: 10px 0; }
+.stat-desc { font-size: 12px; opacity: 0.8; text-transform: uppercase; }
+
+/* Documents */
+.card-doc { text-align: center; }
+.card-doc img { width: 100%; border: 1px solid #ddd; margin-bottom: 10px; }
+.card-doc h4 { font-size: 14px; margin-bottom: 5px; }
+.card-doc span { font-size: 12px; color: #777; }
+
+/* Contacts */
+.contacts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contacts-info { flex: 1; min-width: 300px; }
+.contacts-map { flex: 2; min-width: 300px; }
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: flex-start;
+}
+
+.contact-item i { color: var(--gold); font-size: 20px; margin-top: 5px; }
+
+/* Footer */
+.footer {
+    background-color: #1f2735;
+    color: #ccc;
+    padding: 50px 0 0 0;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 { color: #fff; margin-bottom: 20px; text-transform: uppercase; font-size: 13px; letter-spacing: 1px;}
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a:hover { color: var(--gold); }
+
+.footer-logo-col .logo-area {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.logo-img-small { height: 50px; }
+
+.footer-bottom {
+    background-color: #11161f;
+    padding: 20px 0;
+    border-top: 1px solid #333;
+    font-size: 12px;
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hero-illustration img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Дополнительные стили для страниц */
+.section-padding {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: #f4f3ef;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.section-header h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 28px;
+}
+
+/* Стили для раздела "Об Архиве" */
+.about-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.principle-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.principle-item h4 {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.director-info {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Стили для раздела "Услуги" */
+.services-container {
+    display: flex;
+    gap: 40px;
+}
+
+.service-list {
+    flex: 2;
+}
+
+.service-item {
+    display: flex;
+    gap: 20px;
+    padding: 25px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.service-item:last-child {
+    border-bottom: none;
+}
+
+.service-icon {
+    flex-shrink: 0;
+    color: var(--gold);
+}
+
+.service-content h3 {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.service-content p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.service-link {
+    color: var(--gold);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.service-image {
+    flex: 1;
+}
+
+/* Стили для раздела "Онлайн-запрос" */
+.request-container {
+    display: flex;
+    gap: 40px;
+}
+
+.request-form {
+    flex: 1;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.request-info {
+    flex: 1;
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.request-info ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.request-info ul li {
+    margin-bottom: 10px;
+}
+
+.request-note {
+    background: #fff;
+    padding: 20px;
+    border-left: 4px solid var(--gold);
+    border-radius: 4px;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .about-container,
+    .services-container,
+    .request-container {
+        flex-direction: column;
+    }
+    
+    .service-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .director-info {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .director-photo {
+        float: none !important;
+        margin-right: 0 !important;
+        margin-bottom: 15px;
+    }
+}
+/* Заголовок "УСЛУГИ" с фоновой картинкой */
+.services-header-section {
+    background-image: url('images/services_illustration2.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 300px; /* Высота только для заголовка */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Затемнение, чтобы текст читался */
+.services-header-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Можно убрать, если не нужно */
+}
+
+.services-header-section h2 {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    font-size: 48px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 15px rgba(0,0,0,0.5);
+    margin: 0;
+}
+
+/* Убедитесь, что нижний блок имеет светлый фон */
+.bg-light {
+    background-color: #f4f3ef;
+}
